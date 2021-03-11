@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="card flex-row flex-wrap justify-content-center align-items-center">
+        <div class="card-header border-0 ">
+            <img [src]="book.cover" alt="">
+        </div>
+        <div class="card-block px-2">
+            <h4 class="card-title">{{ book.name }}</h4>
+            <p class="card-text text-info font-weight-bold">{{ book.unitValue | currency }}</p>
+            <a class="btn btn-primary mb-3" [routerLink]="['/books', book._id]">Ver</a>
+        </div>
+        <div class="w-100"></div>
+        <div class="card-footer w-100 text-muted text-justify">
+            {{ book.description }}
+        </div>
+    </div>
+</div>
